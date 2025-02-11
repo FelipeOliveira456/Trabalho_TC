@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  height: 100%;
+}
+
+.container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #4CAF50;
+}
+
+textarea, input, select {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+textarea:focus, input:focus, select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: translateY(1px);
+}
+
+button:disabled {
+  background-color: #b5b5b5;
+  cursor: not-allowed;
+}
+
+#diagram-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#diagram {
+  max-width: 100%;
+  max-height: 400px;
+  display: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#show-diagram-container {
+  margin-top: 20px;
+}
+
+#automaton-result {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#automaton-result pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+}
+
+#accept-form {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+#accept-form input {
+  width: 40%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#accept-form button {
+  width: 45%;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+#automaton-result h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#automaton-id-get {
+  width: 100%;
+  padding: 14px;
+}
+
+#diagram-id {
+  width: 70%;
+  display: inline-block;
+  padding: 14px;
+  margin-right: 10px;
+}
+
+#diagram-type {
+  width: 28%;
+  display: inline-block;
+}
+
+#show-diagram-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2196F3;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease-in-out;
+}
+
+#show-diagram-container button:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+#show-diagram-container button:active {
+  background-color: #1565C0;
+  transform: translateY(1px);
+}
+
+.divider {
+  border: 0;
+  border-top: 2px solid #ddd;
+  margin: 30px 0;
+}

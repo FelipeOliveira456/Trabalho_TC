@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autômatos</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trabalhando com Autômatos</h1>
+
+    <div id="create-form">
+      <h2>Criar um Autômato</h2>
+      <select id="automaton-type">
+        <option value="dfa">DFA</option>
+        <option value="dpda">DPDA</option>
+        <option value="dtm">DTM</option>
+      </select>
+      <textarea id="automaton-data" placeholder="Digite os dados do autômato (em JSON)"></textarea>
+      <button onclick="createAutomaton()">Criar Autômato</button>
+    </div>
+
+    <div id="accept-form">
+      <h2>Testar Aceitação de String</h2>
+      <input type="text" id="automaton-id" placeholder="ID do Autômato">
+      <input type="text" id="input-string" placeholder="Digite a string">
+      <button onclick="acceptInput()">Testar Aceitação</button>
+    </div>
+
+    <hr class="divider">
+
+    <div id="diagram-container">
+      <h2>Diagrama do Autômato</h2>
+      <img id="diagram" src="" alt="Diagrama do autômato">
+    </div>
+
+    <div id="show-diagram-container">
+      <h2>Visualizar Diagrama por ID</h2>
+      <input type="text" id="diagram-id" placeholder="Digite o ID do Autômato">
+      <select id="diagram-type">
+        <option value="dfa">DFA</option>
+        <option value="dpda">DPDA</option>
+      </select>
+      <button onclick="showDiagram()">Ver Diagrama</button>
+    </div>
+
+    <hr class="divider">
+
+    <div id="get-form">
+      <h2>Recuperar um Autômato</h2>
+      <input type="text" id="automaton-id-get" placeholder="Digite o ID do Autômato">
+      <select id="automaton-type-get">
+        <option value="dfa">DFA</option>
+        <option value="dpda">DPDA</option>
+        <option value="dtm">DTM</option>
+      </select>
+      <button onclick="getAutomaton()">Recuperar Autômato</button>
+    </div>
+
+    <div id="automaton-result">
+      <h3>Dados do Autômato:</h3>
+      <pre id="automaton-display"></pre> 
+    </div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
